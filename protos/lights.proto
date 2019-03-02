@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package my_project.lights;
+
+message FactoryName {
+    string value = 1;
+}
+
+message UserName {
+    string value = 1;
+};
+
+message On {
+    bool value = 1;
+}
+
+message Brightness {
+    uint32 value = 1;
+}
+
+message XY {
+    float x = 1;
+    float y = 2;
+    bool valid = 3;
+}
+
+message CT {
+    uint32 value = 1;
+    bool valid = 2;
+}
+
+message CTRange {
+    uint32 min = 1;
+    uint32 max = 2;
+}
+
+message LightService {
+    FactoryName factoryName = 1;
+    On on = 2;
+    Brightness brightness = 3;
+    XY xy = 4;
+    CT ct = 5;
+    CTRange ctRange = 6;
+    UserName userName = 7;
+}
